@@ -1,8 +1,13 @@
 import avatar from "../assets/images/avatar.png";
 import { motion } from "motion/react";
 import Container from "./Container";
+import type { FC } from "react";
 
-const About = () => {
+type Props = {
+  onBackToMenu: () => void;
+};
+
+const About: FC<Props> = ({ onBackToMenu }) => {
   const now = new Date().getFullYear();
   return (
     <Container>
@@ -59,9 +64,14 @@ const About = () => {
         </div>
       </main>
       <footer className="w-full border-t-4 p-5 flex-none">
-        <p className="text-xl">
-          Press "<strong>Esc</strong>" To Menu
-        </p>
+        <div className="flex flex-col md:flex-row md:justify-between">
+          <button onClick={onBackToMenu} className="text-xl hover:font-bold">
+            {"<"} Go Back
+          </button>
+          <p className="text-xl">
+            Press "<strong>Esc</strong>" To Menu
+          </p>
+        </div>
       </footer>
     </Container>
   );

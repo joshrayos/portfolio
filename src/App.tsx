@@ -11,6 +11,10 @@ type Page = "menu" | "about" | "experience" | "tools" | "contact";
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>("menu");
 
+  const handleClickBackToMenu = () => {
+    setCurrentPage("menu");
+  };
+
   useEffect(() => {
     const handleBackToMenu = (e: KeyboardEvent) => {
       if (e.key === "Backspace" || e.key === "Escape") {
@@ -29,10 +33,18 @@ function App() {
           {currentPage === "menu" && (
             <Menubar onNavigate={(target) => setCurrentPage(target)} />
           )}
-          {currentPage === "about" && <About />}
-          {currentPage === "experience" && <Work />}
-          {currentPage === "tools" && <Tools />}
-          {currentPage === "contact" && <Contact />}
+          {currentPage === "about" && (
+            <About onBackToMenu={handleClickBackToMenu} />
+          )}
+          {currentPage === "experience" && (
+            <Work onBackToMenu={handleClickBackToMenu} />
+          )}
+          {currentPage === "tools" && (
+            <Tools onBackToMenu={handleClickBackToMenu} />
+          )}
+          {currentPage === "contact" && (
+            <Contact onBackToMenu={handleClickBackToMenu} />
+          )}
         </AnimatePresence>
       </div>
     </div>

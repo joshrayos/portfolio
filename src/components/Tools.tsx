@@ -24,8 +24,13 @@ import {
 import { BsFiletypeSql } from "react-icons/bs";
 import { VscVscode } from "react-icons/vsc";
 import { motion } from "motion/react";
+import type { FC } from "react";
 
-const Tools = () => {
+type Props = {
+  onBackToMenu: () => void;
+};
+
+const Tools: FC<Props> = ({ onBackToMenu }) => {
   return (
     <>
       <header className="w-full border-b-4 p-3 text-center">
@@ -181,9 +186,14 @@ const Tools = () => {
         </div>
       </main>
       <footer className="w-full border-t-4 p-5 flex-none">
-        <p className="text-xl">
-          Press "<strong>Esc</strong>" To Menu
-        </p>
+        <div className="flex flex-col md:flex-row md:justify-between">
+          <button onClick={onBackToMenu} className="text-xl hover:font-bold">
+            {"<"} Go Back
+          </button>
+          <p className="text-xl">
+            Press "<strong>Esc</strong>" To Menu
+          </p>
+        </div>
       </footer>
     </>
   );

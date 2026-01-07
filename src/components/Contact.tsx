@@ -1,6 +1,11 @@
 import { motion } from "motion/react";
+import type { FC } from "react";
 
-const Contact = () => {
+type Props = {
+  onBackToMenu: () => void;
+};
+
+const Contact: FC<Props> = ({ onBackToMenu }) => {
   return (
     <>
       <header className="w-full border-b-4 p-3 text-center flex-none">
@@ -22,7 +27,7 @@ const Contact = () => {
             <div className="contact-card flex flex-col md:max-w-2xl border-4 p-6">
               <p className="mb-3 text-xl">
                 Whether you have a project idea, or an inquiry, I'd love to hear
-                from you.{" "}
+                it from you.{" "}
               </p>
               <div className="h-1 w-full bg-gb-dark my-3"></div>
               <div className="contact-card__btns flex flex-row flex-wrap justify-center gap-4">
@@ -46,9 +51,14 @@ const Contact = () => {
         </div>
       </main>
       <footer className="w-full border-t-4 p-5 flex-none">
-        <p className="text-xl">
-          Press "<strong>Esc</strong>" To Menu
-        </p>
+        <div className="flex flex-col md:flex-row md:justify-between">
+          <button onClick={onBackToMenu} className="text-xl hover:font-bold">
+            {"<"} Go Back
+          </button>
+          <p className="text-xl">
+            Press "<strong>Esc</strong>" To Menu
+          </p>
+        </div>
       </footer>
     </>
   );
