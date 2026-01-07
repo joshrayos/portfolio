@@ -34,7 +34,9 @@ const Contact = () => {
                 </a>
                 <a
                   className="border-4 w-48 h-16 p-3 bg-gb-medium text-2xl text-center align-middle hover:bg-gb-deep hover:border-gb-deep hover:text-gb-light"
-                  href="#"
+                  href="./RAYOS-RESUME-2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   RESUME
                 </a>
