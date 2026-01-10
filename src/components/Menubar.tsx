@@ -1,4 +1,7 @@
 import { useCallback, useEffect, useState, type FC } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import MainContainer from "./MainContainer";
 
 type PageOption = {
   id: "about" | "experience" | "tools" | "contact";
@@ -40,14 +43,14 @@ const Menubar: FC<Props> = ({ onNavigate }) => {
 
   return (
     <>
-      <header className="w-full border-b-4 p-3 text-center flex-none">
-        <h1 className="text-4xl font-extrabold">MY PORTFOLIO</h1>
-      </header>
-      <main className="p-6 flex flex-col justify-center items-center h-full lg:max-w-7xl mx-auto flex-1">
-        <ul className="flex flex-col items-center lg:gap-8 lg:w-2xl lg:text-3xl">
+      <Header>MY PORTFOLIO</Header>
+      <MainContainer>
+        <ul className="flex flex-col items-center lg:gap-8 lg:w-2xl text-lg md:text-2xl lg:text-3xl">
           {PAGES.map((page, index) => (
             <li
-              className={`flex-1 p-2 lg:w-md ${index === selextedIdx ? "text-gb-light bg-gb-deep" : ""}`}
+              className={`flex-1 p-2 lg:w-md ${
+                index === selextedIdx ? "text-gb-light bg-gb-deep" : ""
+              }`}
               key={page.id}
               onMouseEnter={() => setSelectedIdx(index)}
               onClick={handleConfirm}
@@ -58,15 +61,8 @@ const Menubar: FC<Props> = ({ onNavigate }) => {
             </li>
           ))}
         </ul>
-      </main>
-      <footer className="w-full border-t-4 p-5 flex-none">
-        <p className="text-xl">
-          Press "<strong>↑↓</strong>" To Navigate
-        </p>
-        <p className="text-xl">
-          Press <strong>"ENTER"</strong> To Select
-        </p>
-      </footer>
+      </MainContainer>
+      <Footer isMenu={true} />
     </>
   );
 };
