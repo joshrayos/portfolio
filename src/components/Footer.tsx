@@ -20,7 +20,10 @@ const Footer: FC<Props> = ({ isMenu, onBackToMenu }) => {
       )}
       {!isMenu && (
         <div className='flex flex-col md:flex-row md:justify-between'>
-          <button onClick={onBackToMenu} className='text-xl hover:font-bold'>
+          <button
+            onClick={onBackToMenu}
+            className='text-xl hover:font-bold cursor-pointer'
+          >
             {'<'} Go Back
           </button>
           <p className='text-xl hidden md:block'>
