@@ -26,10 +26,10 @@ const Contact: FC<Props> = ({ onBackToMenu }) => {
             }}
           >
             <div className="contact-card flex flex-col md:max-w-2xl border-4 p-6">
-              <p className="mb-3 text-lg md:text-xl">
+              <h2 className="mb-3 text-lg md:text-xl">
                 Whether you have a project idea, or an inquiry, I'd love to hear
                 it from you.{" "}
-              </p>
+              </h2>
               <div className="h-1 w-full bg-gb-dark my-3"></div>
               <div className="contact-card__btns flex flex-row flex-wrap justify-center gap-4">
                 <a
