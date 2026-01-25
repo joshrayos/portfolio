@@ -27,19 +27,19 @@ const Work: FC<Props> = ({ onBackToMenu }) => {
             }}
           >
             <div className="border-4 p-2 md:p-4 flex-1 bg-gb-medium">
-              <h2 className="work-title text-lg md:text-xl font-bold">
+              <h2 className="work-title text-base sm:text-lg md:text-xl font-bold">
                 Line Seiki Co.Ltd RHQ
               </h2>
-              <h3 className="work-subtitle text-base md:text-lg font-semibold mb-3">
+              <h3 className="work-subtitle text-sm  sm:text-base md:text-lg font-semibold mb-3">
                 2024 - {now}
               </h3>
               <div className="h-1 w-full bg-gb-dark my-3"></div>
-              <p className="text-sm/loose indent-8">
+              <p className="text-xs/loose sm:text-sm/loose indent-8">
                 As part of the CoreMES development team, we build a
                 comprehensive Manufacturing Execution System design to
                 streamline industrial operations for manufacturing companies.
               </p>
-              <p className="text-sm/loose mt-2 indent-8">
+              <p className="text-xs/loose sm:text-sm/loose indent-8">
                 Together. we also developed CoreIO system, that integrates IoT
                 devices to monitor equipment health and empower manufacturing
                 companies to optimize their Overall Equipment Effectiveness and
@@ -60,27 +60,31 @@ const Work: FC<Props> = ({ onBackToMenu }) => {
             }}
           >
             <div className="border-4 p-4 flex-1  bg-gb-medium">
-              <h2 className="work-title text-xl font-bold">
+              <h2 className="work-title text-base sm:text-lg md:text-xl font-bold">
                 Web Powerhouse Inc.
               </h2>
-              <h3 className="work-subtitle text-lg font-semibold mb-3">
+              <h3 className="work-subtitle text-sm  sm:text-base md:text-lg font-semibold mb-3">
                 2022 - 2024
               </h3>
               <div className="h-1 w-full bg-gb-dark my-3"></div>
-              <p className="text-sm/loose indent-8">
+              <p className="text-xs/loose sm:text-sm/loose indent-8">
                 In this agency role, I was instrumental in delivering over{" "}
-                <strong className="text-[16px]">10</strong> full-build projects
-                and <strong className="text-[16px]">50+</strong> templated
+                <strong className="text-sm sm:text-base">10</strong> full-build
+                projects and{" "}
+                <strong className="text-sm sm:text-base">50+</strong> templated
                 projects for our outsourced client,{" "}
-                <strong className="text-[16px]">Wonderist Agency</strong>.
+                <strong className="text-sm sm:text-base">
+                  Wonderist Agency
+                </strong>
+                .
               </p>
-              <p className="text-sm/loose mt-2 indent-8">
+              <p className="text-xs/loose sm:text-sm/loose indent-8">
                 I specialized in rapid prototyping and component level
                 development using a combined stack of{" "}
-                <strong className="text-[16px]">Webflow</strong>,{" "}
-                <strong className="text-[16px]">JavaScript</strong>,
-                <strong className="text-[16px]">jQuery</strong>, and{" "}
-                <strong className="text-[16px]">Webflow CMS</strong>, I
+                <strong className="text-sm sm:text-base">Webflow</strong>,{" "}
+                <strong className="text-sm sm:text-base">JavaScript</strong>,
+                <strong className="text-sm sm:text-base">jQuery</strong>, and{" "}
+                <strong className="text-sm sm:text-base">Webflow CMS</strong>, I
                 collaborated directly with designers and project managers to
                 efficiently translate complex visual mockups into functional,
                 responsive web experiences.
