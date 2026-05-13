@@ -30,9 +30,11 @@ const Work: FC<Props> = ({ onBackToMenu }) => {
               <h2 className='work-title text-base sm:text-lg md:text-xl font-bold'>
                 Line Seiki Philippines, Inc.
               </h2>
-              <p>General Trias, Cavite</p>
+              <p className='font-extrabold font-mono text-xl'>
+                General Trias, Cavite
+              </p>
               <div className='h-1 w-full bg-gb-dark my-2'></div>
-              <h3 className='work-subtitle text-sm  sm:text-sm md:text-base mb-3'>
+              <h3 className='work-subtitle font-mono text-2xl font-extrabold'>
                 2024 - {now}
               </h3>
             </div>
@@ -53,9 +55,9 @@ const Work: FC<Props> = ({ onBackToMenu }) => {
               <h2 className='work-title text-base sm:text-lg md:text-xl font-bold'>
                 Web Powerhouse Inc.
               </h2>
-              <p>Makati, Manila</p>
+              <p className='font-extrabold font-mono text-xl'>Makati, Manila</p>
               <div className='h-1 w-full bg-gb-dark my-2'></div>
-              <h3 className='work-subtitle text-sm  sm:text-sm md:text-base mb-3'>
+              <h3 className='work-subtitle font-mono text-2xl font-extrabold'>
                 2022 - 2024
               </h3>
             </div>

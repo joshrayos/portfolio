@@ -47,16 +47,16 @@ const About: FC<Props> = ({ onBackToMenu }) => {
               delay: 0.1,
             }}
           >
-            <div className='self-center text-center'>
+            <div className='self-center text-left'>
               <h2 className='text-xl sm:text-2xl font-medium'>
                 Hi I'm <span className='font-bold'>JOSH</span>
               </h2>
-              <p className='mt-4 text-sm sm:text-base'>
+              <p className='mt-4 font-mono font-extrabold text-xl'>
                 With {now - 2022} years of experience. I build fast, and
                 interactive <span className='font-bold'>UIs</span> using React
                 alongside modern frameworks and libraries.
               </p>
-              <p className='mt-4 text-sm sm:text-base'>
+              <p className='mt-4 font-mono font-extrabold text-xl'>
                 With my technical depth that extends to full stack I use Express
                 and .NET for RESTful API development.
               </p>

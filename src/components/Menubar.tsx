@@ -47,7 +47,7 @@ const Menubar: FC<Props> = ({ onNavigate }) => {
 
   return (
     <>
-      <Header>JOSH</Header>
+      <Header>JOSH RAYOS</Header>
       <MainContainer>
         <ul className='flex flex-col items-center lg:gap-8 lg:w-2xl text-lg md:text-2xl lg:text-3xl'>
           {PAGES.map((page, index) => (

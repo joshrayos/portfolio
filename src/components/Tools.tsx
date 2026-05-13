@@ -8,11 +8,10 @@ import {
   SiFastapi,
   SiMongodb,
   SiPostman,
-  SiSqlite,
   SiVite,
+  SiRedux,
 } from 'react-icons/si';
 import {
-  FaBootstrap,
   FaCss3Alt,
   FaGitAlt,
   FaGithub,
@@ -20,8 +19,8 @@ import {
   FaNodeJs,
   FaReact,
   FaSourcetree,
+  FaMasksTheater,
 } from 'react-icons/fa6';
-import { BsFiletypeSql } from 'react-icons/bs';
 import { VscVscode } from 'react-icons/vsc';
 import { motion } from 'motion/react';
 import type { FC } from 'react';
@@ -57,26 +56,26 @@ const Tools: FC<Props> = ({ onBackToMenu }) => {
                   <h2 className='font-pix text-lg font-bold'>FRONT-END</h2>
                 </div>
                 <div className='tool-card__body flex flex-col gap-3'>
-                  <Tool text='Tailwind'>
-                    <RiTailwindCssFill />
+                  <Tool text='React'>
+                    <FaReact />
                   </Tool>
                   <Tool text='TypeScript'>
                     <BiLogoTypescript />
                   </Tool>
-                  <Tool text='Bootstrap'>
-                    <FaBootstrap />
-                  </Tool>
                   <Tool text='JavaScript'>
                     <RiJavascriptFill />
+                  </Tool>
+                  <Tool text='Redux'>
+                    <SiRedux />
+                  </Tool>
+                  <Tool text='Tailwind'>
+                    <RiTailwindCssFill />
                   </Tool>
                   <Tool text='HTML'>
                     <FaHtml5 />
                   </Tool>
                   <Tool text='CSS'>
                     <FaCss3Alt />
-                  </Tool>
-                  <Tool text='React'>
-                    <FaReact />
                   </Tool>
                 </div>
               </div>
@@ -110,13 +109,7 @@ const Tools: FC<Props> = ({ onBackToMenu }) => {
                   <Tool text='PostgreSQL'>
                     <BiLogoPostgresql />
                   </Tool>
-                  <Tool text='SQLite'>
-                    <SiSqlite />
-                  </Tool>
-                  <Tool text='MSSQL'>
-                    <BsFiletypeSql />
-                  </Tool>
-                  <Tool text='.NET Core / Framework'>
+                  <Tool text='.NET'>
                     <SiDotnet />
                   </Tool>
                   <Tool text='FastAPI'>
@@ -162,6 +155,9 @@ const Tools: FC<Props> = ({ onBackToMenu }) => {
                   </Tool>
                   <Tool text='Aseprite'>
                     <SiAseprite />
+                  </Tool>
+                  <Tool text='Playwright'>
+                    <FaMasksTheater />
                   </Tool>
                 </div>
               </div>
